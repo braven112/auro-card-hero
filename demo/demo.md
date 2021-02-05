@@ -8,27 +8,34 @@ Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
 
 The `auro-card-hero` element should be used in situations where users may:
 
-* egestas bibendum mauris cursus
-* quis euismod felis mollis
-* consectetur ipsum risus sed tortor
+- egestas bibendum mauris cursus
+- quis euismod felis mollis
+- consectetur ipsum risus sed tortor
 
 > Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
 
-|convallis|tristique|nisl dignissim|eleifend|
-|---|---|---|---|
-|√|√|||
-|||√|√|
+| convallis | tristique | nisl dignissim | eleifend |
+| --------- | --------- | -------------- | -------- |
+| √         | √         |                |          |
+|           |           | √              | √        |
 
 <div class="exampleWrapper">
-  <auro-card-hero cssClass="testClass">Hello World!</auro-card-hero>
+  <auro-card-hero cssClass="testClass">
+    <auro-header slot="title">Title</auro-header>
+    <auro-header slot="subtitle" level="5" display="400">Sub title</auro-header>
+    <img />
+    <p>blah blah</p>
+    <auro-button slot="button">Button</auro-button>
+    <p slot="fine-print">Void where prohibitited</p>
+  </auro-card-hero>
 </div>
 
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
-  ```html
-  <auro-card-hero cssClass="testClass">Hello World!</auro-card-hero>
-  ```
+```html
+<auro-card-hero cssClass="testClass" slot="headline">Hello World!</auro-card-hero>
+```
 
 </auro-accordion>
 
@@ -39,18 +46,18 @@ Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl li
 ```javascript
 toggleDialog = (elName) => {
   let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
+  const html = document.querySelector("html");
 
-  html.style.overflow = 'hidden';
+  html.style.overflow = "hidden";
   dialog.removeAttribute("open");
   dialog.setAttribute("open", true);
-}
+};
 
 toggleDialogClose = (elName) => {
   let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
+  const html = document.querySelector("html");
 
-  html.style.overflow = '';
+  html.style.overflow = "";
   dialog.removeAttribute("open");
-}
+};
 ```

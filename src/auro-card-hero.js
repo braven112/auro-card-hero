@@ -32,7 +32,7 @@ class AuroCardHero extends LitElement {
   static get properties() {
     return {
       // ...super.properties,
-      cssClass:   { type: String }
+      cssClass: { type: String },
     };
   }
 
@@ -49,7 +49,12 @@ class AuroCardHero extends LitElement {
   render() {
     return html`
       <div class=${this.cssClass}>
+        <slot name="img"></slot>
+        <slot name="title"></slot>
+        <slot name="subtitle"></slot>
         <slot></slot>
+        <slot name="button"></slot>
+        <slot name="fine-print"></slot>
       </div>
     `;
   }
