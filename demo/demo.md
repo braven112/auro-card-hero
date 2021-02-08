@@ -1,14 +1,14 @@
 # auro-card-hero
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
+<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
 
-Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
-
+Nulla at augue facilisis `odio lobortis` molestie vitae a nulla. -->
+<!--
 ## auro-card-hero use cases
 
-The `auro-card-hero` element should be used in situations where users may:
+The `auro-card-hero` element should be used in situations where users may: -->
 
-- egestas bibendum mauris cursus
+<!-- - egestas bibendum mauris cursus
 - quis euismod felis mollis
 - consectetur ipsum risus sed tortor
 
@@ -17,16 +17,16 @@ The `auro-card-hero` element should be used in situations where users may:
 | convallis | tristique | nisl dignissim | eleifend |
 | --------- | --------- | -------------- | -------- |
 | √         | √         |                |          |
-|           |           | √              | √        |
+|           |           | √              | √        | -->
 
 <div class="exampleWrapper">
-  <auro-card-hero cssClass="testClass">
-    <auro-header slot="title">Title</auro-header>
+  <auro-card-hero cssClass="banner">
+    <div slot="img-left" style="min-width: 200px;height: 200px; background-image: url(https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/kitty.png); background-size: cover; background-position: center;" ></div>
+    <auro-header slot="title" level="5" display="400">Title</auro-header>
     <auro-header slot="subtitle" level="5" display="400">Sub title</auro-header>
-    <img />
-    <p>blah blah</p>
-    <auro-button slot="button">Button</auro-button>
+    <auro-button href="#" cta slot="cta">Button</auro-button>
     <p slot="fine-print">Void where prohibitited</p>
+    <div slot="img-right" ></div>
   </auro-card-hero>
 </div>
 
@@ -34,7 +34,7 @@ The `auro-card-hero` element should be used in situations where users may:
   <span slot="trigger">See code</span>
 
 ```html
-<auro-card-hero cssClass="testClass" slot="headline">Hello World!</auro-card-hero>
+<auro-card-hero cssClass="banner"> </auro-card-hero>
 ```
 
 </auro-accordion>

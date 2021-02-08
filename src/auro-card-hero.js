@@ -49,12 +49,15 @@ class AuroCardHero extends LitElement {
   render() {
     return html`
       <div class=${this.cssClass}>
-        <slot name="img"></slot>
-        <slot name="title"></slot>
-        <slot name="subtitle"></slot>
-        <slot></slot>
-        <slot name="button"></slot>
-        <slot name="fine-print"></slot>
+        <slot name="img-left"></slot>
+        <div class="offer">
+          <slot name="title"></slot>
+          <slot name="subtitle"></slot>
+          <slot name="description"></slot>
+          <slot name="cta"></slot>
+          <slot name="fine-print" class="fine-print"></slot>
+        </div>
+        <slot name="img-right"></slot>
       </div>
     `;
   }

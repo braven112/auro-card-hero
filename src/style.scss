@@ -21,15 +21,39 @@
 // layout styles - define any layout specifications for UI that is contained WITHIN the component
 // never define layout that would cause effect on element outside the scope of this component
 
-
 // component shape styles
 // .auro-card-hero {
 //   ...
 // }
 
-.testClass {
-  color:  var(--auro-color-border-error-on-light);
-  border: 1px solid var(--auro-color-border-error-on-light);
-  display: inline-block;
-  padding: var(--auro-text-body-size-default);
+.banner {
+  color: $auro-color-text-primary-on-light;
+  border: 1px solid $auro-color-border-disabled-on-light;
+  border-radius: $auro-border-radius;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $auro-color-background-lightest;
+  overflow: hidden;
+}
+// slot[name="img-left"] {
+//   background-image: url("https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/kitty.png");
+//   background-size: cover;
+//   height: 100%;
+//   width: 200px;
+//   margin: -$auro-size-md;
+//   margin-right: $auro-size-lg;
+// }
+slot[name="img-left"],
+slot[name="img-right"] {
+  display: block;
+  margin: -$auro-size-md 0;
+}
+.offer {
+  margin: 0 $auro-size-md;
+  flex-grow: 1;
+}
+.fine-print {
+  color: $auro-color-text-secondary-on-light;
+  font-size: 10px;
 }
