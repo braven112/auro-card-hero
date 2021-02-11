@@ -26,31 +26,44 @@
 //   ...
 // }
 
-.banner {
+.banner,
+.hero {
   color: $auro-color-text-primary-on-light;
-  border: 1px solid $auro-color-border-disabled-on-light;
-  border-radius: $auro-border-radius;
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: $auro-color-background-lightest;
   overflow: hidden;
+  &.border {
+    border: 1px solid $auro-color-border-disabled-on-light;
+    border-radius: $auro-border-radius;
+  }
+  .l,
+  .r {
+    display: block;
+  }
+  .r {
+    margin-left: $auro-size-md * 2;
+  }
+  &.img-left {
+    .r {
+      display: none;
+    }
+    .l {
+      margin-right: $auro-size-md * 2;
+    }
+  }
+  &.img-right {
+    .l {
+      display: none;
+    }
+    .r {
+      margin-left: $auro-size-md * 2;
+    }
+  }
 }
-// slot[name="img-left"] {
-//   background-image: url("https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/kitty.png");
-//   background-size: cover;
-//   height: 100%;
-//   width: 200px;
-//   margin: -$auro-size-md;
-//   margin-right: $auro-size-lg;
-// }
-slot[name="img-left"],
-slot[name="img-right"] {
-  display: block;
-  margin: -$auro-size-md 0;
-}
+
 .offer {
-  margin: 0 $auro-size-md;
   flex-grow: 1;
 }
 .fine-print {

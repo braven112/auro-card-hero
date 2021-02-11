@@ -49,7 +49,7 @@ class AuroCardHero extends LitElement {
   render() {
     return html`
       <div class=${this.cssClass}>
-        <slot name="img-left"></slot>
+        <slot class="l" name="img-left"></slot>
         <div class="offer">
           <slot name="title"></slot>
           <slot name="subtitle"></slot>
@@ -57,7 +57,7 @@ class AuroCardHero extends LitElement {
           <slot name="cta"></slot>
           <slot name="fine-print" class="fine-print"></slot>
         </div>
-        <slot name="img-right"></slot>
+        <slot class="r" name="img-right"></slot>
       </div>
     `;
   }
