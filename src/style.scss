@@ -38,31 +38,15 @@
     border: 1px solid $auro-color-border-disabled-on-light;
     border-radius: $auro-border-radius;
   }
-  .l,
-  .r {
-    display: block;
-  }
-  .r {
-    margin-left: $auro-size-md * 2;
-  }
-  &.img-left {
-    .r {
-      display: none;
-    }
-    .l {
-      margin-right: $auro-size-md * 2;
-    }
-  }
-  &.img-right {
-    .l {
-      display: none;
-    }
-    .r {
-      margin-left: $auro-size-md * 2;
-    }
-  }
 }
-
+.imgLeft {
+  display: block;
+  margin-right: $auro-size-md * 2;
+}
+.imgRight {
+  display: block;
+  margin-left: $auro-size-md * 2;
+}
 .offer {
   flex-grow: 1;
 }

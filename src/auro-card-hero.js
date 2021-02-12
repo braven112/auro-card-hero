@@ -28,6 +28,21 @@ class AuroCardHero extends LitElement {
   //   super();
   // }
 
+  // This function removes a CSS selector if the footer slot is empty
+  firstUpdated() {
+    const slotClass = this.cssClass.split(" ").join("."),
+      slotObj = this.shadowRoot.querySelectorAll(`.${slotClass} slot`);
+
+    for (const item of slotObj) {
+      this.slt = item.assignedNodes();
+
+      // eslint-disable-next-line no-magic-numbers
+      if (this.slt.length === 0) {
+        item.removeAttribute("class");
+      }
+    }
+  }
+
   // function to define props used within the scope of this component
   static get properties() {
     return {
@@ -49,15 +64,15 @@ class AuroCardHero extends LitElement {
   render() {
     return html`
       <div class=${this.cssClass}>
-        <slot class="l" name="img-left"></slot>
+        <slot name="img-left" class="imgLeft"></slot>
         <div class="offer">
-          <slot name="title"></slot>
-          <slot name="subtitle"></slot>
-          <slot name="description"></slot>
-          <slot name="cta"></slot>
+          <slot name="title" class="title"></slot>
+          <slot name="subtitle" class="subtitle"></slot>
+          <slot name="description" class="description"></slot>
+          <slot name="cta" class="cta"></slot>
           <slot name="fine-print" class="fine-print"></slot>
         </div>
-        <slot class="r" name="img-right"></slot>
+        <slot name="img-right" class="imgRight"></slot>
       </div>
     `;
   }
