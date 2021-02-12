@@ -1,8 +1,8 @@
 # auro-card-hero
 
-<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
 
-Nulla at augue facilisis `odio lobortis` molestie vitae a nulla. -->
+<!--Nulla at augue facilisis `odio lobortis` molestie vitae a nulla. -->
 <!--
 ## auro-card-hero use cases
 
@@ -22,19 +22,20 @@ The `auro-card-hero` element should be used in situations where users may: -->
 <auro-header slot="title" level="2" display="800">Banner Variant - Default</auro-header>
 
 <div class="exampleWrapper">
-   <auro-card-hero cssClass="banner">
+   <auro-card-hero cssClass="banner imgRight imgWidth-xxl imgHeight-lg imgContain">
     <auro-header slot="title" level="2" display="800">Relax before the runway</auro-header>
+    <auro-header slot="mobile-title" level="2" display="800">Relax before the runway</auro-header>
     <p slot="description" style="line-height: 1.25rem">Experience our unparalleled airport lounge service in a quiet space to relax and recharge, or get a little work done between flights. Enhanced cleaning procedures and limited capacity offer additional peace of mind. Our newest Alaska Lounge location is now open in Sea-Tac's North Satellite terminal. At over 15,800 square feet, our flagship lounge has it all. Prepare to relax by the grand fireplace or sip a local brew at the spacious bar while taking in the best runway views at Sea-Tac.</p>
     <auro-hyperlink href="#" secondary cta slot="cta">Explore lounges</auro-hyperlink>
-    <div slot="img-right" style="min-width: 500px;height: 500px; background-image: url(https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/lounge.png); background-size: cover; background-position: center;" ></div>
+    <div slot="img" style="background-image: url(https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/lounge.png);" ></div>
   </auro-card-hero>
 </div>
 
 <auro-header slot="title" level="2" display="800">Banner Variant - Border</auro-header>
 
 <div class="exampleWrapper">
-  <auro-card-hero cssClass="banner border img-left">
-    <div slot="img-left" style="min-width: 400px; height: 300px; background-image: url(https://sitecore-prod-cd-westus2.azurewebsites.net/-/media/Images/common-assets/bank/2020/Visa-2020.png?la=en);     background-size: 80%;background-position: center; background-repeat: no-repeat;" >
+  <auro-card-hero cssClass="banner border imgWidth-lg imgContain">
+    <div slot="img" style="background-image: url(https://sitecore-prod-cd-westus2.azurewebsites.net/-/media/Images/common-assets/bank/2020/Visa-2020.png?la=en);" >
     </div>
     <auro-header slot="title" level="2" display="800">50,000 reasons to apply.</auro-header>
     <auro-header slot="subtitle" level="5" display="400">For a limited time, get a 50,000 bonus mile offer. That's enough miles for a round-trip ticket anywhere Alaska flies!</auro-header>
@@ -54,12 +55,12 @@ The `auro-card-hero` element should be used in situations where users may: -->
       <li><auro-hyperlink href="#narrowSection">Seemless travel</auro-hyperlink></li>
     </ul>
   </div>
-  <auro-card-hero cssClass="hero">
+  <auro-card-hero cssClass="banner imgRight imgContain">
     <auro-header slot="title" level="2" display="800"><b>one</b>world alliance</auro-header>
     <p slot="description" style="line-height: 1.25rem">Welcome to <b>one</b>world®, an alliance of the world’s leading airlines committed to providing the highest level of service and convenience across more than 1,000 destinations worldwide.</p>
     <auro-hyperlink href="#" secondary cta slot="cta">Button</auro-hyperlink>
     <p slot="fine-print">Void where prohibitited</p>
-    <div slot="img-right" style="min-width: 500px;height: 500px; background-image: url(https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/yellow.png); background-size: cover; background-position: center;" ></div>
+    <div slot="img" style="background-image: url(https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/yellow.png);" ></div>
   </auro-card-hero>
 </div>
 </div>

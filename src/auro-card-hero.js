@@ -63,16 +63,16 @@ class AuroCardHero extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-      <div class=${this.cssClass}>
-        <slot name="img-left" class="imgLeft"></slot>
+      <div id="auroBanner" class=${this.cssClass}>
+        <slot name="img" class="img"></slot>
+        <div class="gutter"></div>
         <div class="offer">
           <slot name="title" class="title"></slot>
           <slot name="subtitle" class="subtitle"></slot>
           <slot name="description" class="description"></slot>
           <slot name="cta" class="cta"></slot>
-          <slot name="fine-print" class="fine-print"></slot>
+          <slot name="fine-print" class="finePrint"></slot>
         </div>
-        <slot name="img-right" class="imgRight"></slot>
       </div>
     `;
   }

@@ -37,8 +37,12 @@ main {
 .heroWrapper {
   display: flex;
   align-items: center;
-  flex-direction: reverse;
+  flex-direction: column;
+  @media screen and (min-width: $auro-breakpoint-sm) {
+    flex-direction: row;
+  }
   justify-content: space-between;
+  background-color: white;
 
   .hero {
     flex-basis: 800px;

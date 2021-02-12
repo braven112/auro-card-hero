@@ -26,31 +26,146 @@
 //   ...
 // }
 
-.banner,
-.hero {
+.banner {
+  background-color: $auro-color-background-lightest;
   color: $auro-color-text-primary-on-light;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  background-color: $auro-color-background-lightest;
   overflow: hidden;
-  &.border {
-    border: 1px solid $auro-color-border-disabled-on-light;
-    border-radius: $auro-border-radius;
+  flex-direction: column;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    flex-direction: row;
   }
 }
-.imgLeft {
-  display: block;
-  margin-right: $auro-size-md * 2;
-}
+// Variants to the default style
 .imgRight {
-  display: block;
-  margin-left: $auro-size-md * 2;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    flex-direction: row-reverse;
+  }
+}
+.imgStyle {
+  min-width: 100%;
+  min-height: 200px;
+  // padding-top: 100%; // 1:1 ratio
+  // // padding-top: 56.25%; // 16:9 ratio
+  // // padding-top: 75%; // 4:3 ratio
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+//Image Size modifiers
+.imgContain ::slotted(div) {
+  @extend .imgStyle;
+  background-size: contain;
+}
+.imgCover ::slotted(div) {
+  @extend .imgStyle;
+  background-size: cover;
+}
+.imgBg100percent ::slotted(div) {
+  @extend .imgStyle;
+  background-size: 100%;
+}
+// Set the width of the image
+.imgWidth-xs ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-width: 100px;
+  }
+}
+.imgWidth-sm ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-width: 200px;
+  }
+}
+.imgWidth-md ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-width: 300px;
+  }
+}
+.imgWidth-lg ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-width: 400px;
+  }
+}
+.imgWidth-xl ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-width: 500px;
+  }
+}
+.imgWidth-xxl ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-width: 600px;
+  }
+}
+.imgWidth-fw ::slotted(div) {
+  @extend .imgStyle;
+  min-width: 100%;
+}
+// Set the height of the image
+.imgHeight-xs ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-width: 100px;
+  }
+}
+.imgHeight-sm ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-height: 200px;
+  }
+}
+.imgHeight-md ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-height: 300px;
+  }
+}
+.imgHeight-lg ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-height: 400px;
+  }
+}
+.imgHeight-xl ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-height: 500px;
+  }
+}
+.imgHeight-xxl ::slotted(div) {
+  @extend .imgStyle;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    min-height: 600px;
+  }
+}
+.imgHeight-fw ::slotted(div) {
+  @extend .imgStyle;
+  min-height: 100%;
+}
+
+.border {
+  border: 1px solid $auro-color-border-disabled-on-light;
+  border-radius: $auro-border-radius;
+  padding: $auro-size-md;
+}
+
+//Spacing between Image and Copy
+.gutter {
+  padding: $auro-size-sm;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    padding: $auro-size-lg;
+  }
 }
 .offer {
   flex-grow: 1;
 }
-.fine-print {
+.finePrint {
   color: $auro-color-text-secondary-on-light;
   font-size: 10px;
 }
